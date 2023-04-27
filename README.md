@@ -2,7 +2,8 @@
 #Steps to run the application - 
 
 1. Install node package - nmp install
-2. Run the application 
+2. Create .env file with DATABASE_CON_URI= <Mongo Connection String URL>
+3. Run the application 
     for nodemon - npm run de
     for npm - npm start
-3. Find the postmen collection json file for request urls
+4. Find the postmen collection json file for request urls
