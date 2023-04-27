@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "9fb50624-7ce6-4398-adc3-ef23d58693d4",
+		"name": "Wallet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Creating wallets",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Savings Pot\",\r\n  \"balance\":\"10.00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/wallet/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"wallet",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetching wallets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/wallet/543fc1b6-e13e-4191-ad5a-4f6a370d035c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"wallet",
+						"543fc1b6-e13e-4191-ad5a-4f6a370d035c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deposit Transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"amount\": 50,\r\n  \"description\": \"Credit\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/wallet/543fc1b6-e13e-4191-ad5a-4f6a370d035c/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"wallet",
+						"543fc1b6-e13e-4191-ad5a-4f6a370d035c",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Withdrawing Transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"amount\":-49,\r\n  \"description\": \"Debit\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/wallet/543fc1b6-e13e-4191-ad5a-4f6a370d035c/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"wallet",
+						"543fc1b6-e13e-4191-ad5a-4f6a370d035c",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transactions List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/wallet/543fc1b6-e13e-4191-ad5a-4f6a370d035c/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"wallet",
+						"543fc1b6-e13e-4191-ad5a-4f6a370d035c",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
